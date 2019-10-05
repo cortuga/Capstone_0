@@ -17,6 +17,7 @@ namespace Capstone_0.Models
     public String ProjectsToKeepInMindForFutureAre { get; set; }
     public String IWouldKnowTodayIsASuccessIf { get; set; }
     // public string JournalEntry { get; set; }
+    // Pillars of the day Below. Think about potential refactor of meta organization
     public String TodaysMessageToMyself { get; set; }
     public String TodaysTopPriorities { get; set; }
     public String TasksThatMustBeDoneToday { get; set; }
