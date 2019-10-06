@@ -13,7 +13,7 @@ export default function Todos() {
     e.preventDefault() //grabs the current state of newTodo
     if (newTodo === "") return //if newtodo is empty then return and do nothing
     setTodos([...todos, { id: Date.now(), text: newTodo }])
-    e.target.reset()
+    e.target.reset() //resets the form
     // console.log(newTodo)
   }
 
