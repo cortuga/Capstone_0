@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Route } from 'react-router'
 import { Layout } from './components/Layout'
 import { Home } from './components/Home'
-import { FetchData } from './components/FetchData'
+// import { FetchData } from './components/FetchData'
 import { Counter } from './components/Counter'
 
 import Nav from "./components/Nav"
@@ -16,6 +16,7 @@ import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Testing from './Testing'
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import LandingPage from './components/LandingPage'
 
 export default class App extends Component {
   static displayName = App.name
@@ -46,10 +47,12 @@ export default class App extends Component {
       <Router>
         <Nav />
           <Switch>
-            <Route exact path="/home" component={Home} />
-            <Route path="/counter" component={Counter} />
-            <Route path="/fetch-data" component={FetchData} />
-            <Route path="/hello" component={Testing} />
+            <Route exact path="/" component={LandingPage} />
+            <Route path="/Journal" component={Journal} />
+            <Route path="/Todos" component={Todos} />
+            <Route path="/Calender" component={Calender} />
+            <Route path="/LifeGoals" component={LifeGoals} />
+            <Route path="/Profile" component={Profile} />
           </Switch>
       </Router>
       </>

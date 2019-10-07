@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Text.RegularExpressions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Capstone_0.Models;
 
 namespace capstone_0
 {
@@ -44,5 +45,17 @@ namespace capstone_0
     {
       modelBuilder.HasAnnotation("ProductVersion", "2.2.0-rtm-35687");
     }
+
+
+
+    public DbSet<Capstone_0.Models.TodoModel> TodoModel { get; set; }
+
+
+
+    public DbSet<Capstone_0.Models.UserProfileModel> UserProfileModel { get; set; }
+
+
+
+    public DbSet<Capstone_0.Models.LongTermGoalsModel> LongTermGoalsModel { get; set; }
   }
 }
