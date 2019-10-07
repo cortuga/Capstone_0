@@ -11,6 +11,7 @@ import Todos from "./components/Todos"
 import Calender from "./components/Calender"
 import LifeGoals from "./components/LifeGoals"
 import Profile from "./components/Profile"
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Testing from './Testing'
 
