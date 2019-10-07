@@ -4,7 +4,7 @@ const Journal = () => {
   return (
     <>
       <div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label>
             Name:
             <input type='text' name='name' />
