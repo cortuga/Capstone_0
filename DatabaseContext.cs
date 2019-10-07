@@ -29,7 +29,7 @@ namespace capstone_0
       if (!optionsBuilder.IsConfigured)
       {
         var envConn = Environment.GetEnvironmentVariable("DATABASE_URL");
-#warning Be sure to update to your correct connection string to the point to the correct database
+        // #warning Be sure to update to your correct connection string to the point to the correct database
         var conn = "server=localhost;database=Capstone_DB;User Id=postgres;password=element0";
         if (envConn != null)
         {
