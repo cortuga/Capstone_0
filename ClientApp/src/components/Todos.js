@@ -34,7 +34,6 @@ export default function Todos() {
         <ul className='todolist-ul'>
           {todos.map(todo => (
             <li key={todo.id} classList='todo-li'>
-              {" "}
               {todo.text}
               <a href='#' onclick={() => removeTodo(todo.id)}>
                 Delete
