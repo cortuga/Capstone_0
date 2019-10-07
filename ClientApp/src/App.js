@@ -25,11 +25,11 @@ export default class App extends Component {
           <Nav />
           <Switch>
             <Route exact path='/' component={LandingPage} />
-            <Route path='/Journal' component={Journal} />
-            <Route path='/Todos' component={Todos} />
-            <Route path='/Calender' component={Calender} />
-            <Route path='/LifeGoals' component={LifeGoals} />
-            <Route path='/Profile' component={Profile} />
+            <Route path='/components/Journal' component={Journal} />
+            <Route path='/components/Todos' component={Todos} />
+            <Route path='/components/Calender' component={Calender} />
+            <Route path='/components/LifeGoals' component={LifeGoals} />
+            <Route path='/components/Profile' component={Profile} />
           </Switch>
         </Router>
       </>
