@@ -33,9 +33,9 @@ export default function Todos() {
 
         <ul className='todolist-ul'>
           {todos.map(todo => (
-            <li key={todo.id} classList='todo-li'>
+            <li key={todo.id} className='todo-li'>
               {todo.text}
-              <a href='#' onclick={() => removeTodo(todo.id)}>
+              <a href='#' onClick={() => removeTodo(todo.id)}>
                 Delete
               </a>
             </li>

@@ -19,6 +19,11 @@ const Journal = () => {
 
             {/* the question above doesn't have a place in the model. Going to make the other 3 ree pillers part of the todo section */}
 
+            {/* <textarea rows='5' cols='50'>
+              Today's Top 3 Goals / Priorities...
+            </textarea> */}
+            {/* Want to make the Top 3 goals passed to the Todos component */}
+
             <textarea rows='5' cols='50'>
               One Thing I can get excited about today is...
             </textarea>
