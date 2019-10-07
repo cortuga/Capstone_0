@@ -57,5 +57,9 @@ namespace capstone_0
 
 
     public DbSet<Capstone_0.Models.LongTermGoalsModel> LongTermGoalsModel { get; set; }
+
+
+
+    public DbSet<Capstone_0.Models.JournalModel> JournalModel { get; set; }
   }
 }
