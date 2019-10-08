@@ -11,7 +11,10 @@ namespace Capstone_0.Models
     public String WhatMightStressMeOut { get; set; }
     public String TheWayMyBestSelfWouldDealIs { get; set; }
     public String SomeoneToSurpriseWithAppreciation { get; set; }
-    public String OneActionToDeminstrateExecellence { get; set; }
+    public String OneActionToDemonstrateExcellence { get; set; }
+
+    // Changed spelling of the OneAction name to correct spelling, may need some further attention of errors occur. 
+
     public String OneBoldActionToTakeToday { get; set; }
     public String LookingAtMyLifeMetaIWouldTellMyself { get; set; }
     public String ProjectsToKeepInMindForFutureAre { get; set; }

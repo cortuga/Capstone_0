@@ -9,7 +9,21 @@ const Journal = () => {
     e.preventDefault() //Considering I want this to take user to Journal history or take user to todo page, i shouldn't prevent default.
     const PostJournal = async () => {
       const resp = await axios.Post("https://localhost:5001/api/Journal", {
-        excitedAboutToday: excited
+        excitedAboutToday: excited,
+        OneWordToDescribeMeToday: oneWord,
+        WhoNeedsMeOnMyAGame: needsMe,
+        WhatMightStressMeOut: stressMeOut,
+        TheWayMyBestSelfWouldDealIs: bestSelf,
+        SomeoneToSurpriseWithAppreciation: someoneToSurprise,
+        OneActionToDemonstrateExcellence: excellence,
+        OneBoldActionToTakeToday: BoldAction,
+        LookingAtMyLifeMetaIWouldTellMyself: lifeMeta,
+        ProjectsToKeepInMindForFutureAre: futureProjects,
+        IWouldKnowTodayIsASuccessIf: successfulToday,
+        TodaysMessageToMyself: todaysMessage,
+        TodaysTopPriorities: topPriorities,
+        TasksThatMustBeDoneToday: mustBeDoneToday,
+        PersonsToConnectWithToday: connectToday,
       })
       console.log(resp)
     }

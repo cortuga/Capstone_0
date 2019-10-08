@@ -23,7 +23,7 @@ export default function Todos() {
     // console.log(todo.id, id)
   }
 
-  // const fetchunicorn = async () => {
+  // const fetchUnicorn = async () => {
   //   const resp = await axios.get('swagger url')
   //   console.log(resp.data or whatever)
 
