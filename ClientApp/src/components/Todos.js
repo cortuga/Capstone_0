@@ -9,7 +9,7 @@ export default function Todos() {
     setNewTodo(e.target.value)
   }
 
-  function handleNewTodo(e) {
+  const handleNewTodo = e => {
     e.preventDefault() //grabs the current state of newTodo
     if (newTodo === "") return //if newtodo is empty then return and do nothing
     setTodos([...todos, { id: Date.now(), text: newTodo }])
@@ -18,9 +18,17 @@ export default function Todos() {
   }
 
   function removeTodo(id) {
+    // e.preventDefault
     setTodos(todos.filter(todo => todo.id !== id))
     // console.log(todo.id, id)
   }
+
+  // const fetchunicorn = async () => {
+  //   const resp = await axios.get('swagger url')
+  //   console.log(resp.data or whatever)
+
+  //   setState (resp.data)
+  // }
 
   return (
     <>

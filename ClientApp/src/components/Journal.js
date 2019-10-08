@@ -1,6 +1,13 @@
 import React from "react"
 
 const Journal = () => {
+  //  // const fetchunicorn = async () => {
+  //   const resp = await axios.get('swagger url')
+  //   console.log(resp.data or whatever)
+
+  //   setState (resp.data)
+  // }
+
   function handleSubmit(e) {
     e.preventDefault() //Considering I want this to take user to Journal history or take user to todo page, i shouldn't prevent default.
   }
