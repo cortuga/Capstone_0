@@ -21,7 +21,7 @@ namespace Capstone_0.Models
     public String IWouldKnowTodayIsASuccessIf { get; set; }
     // public string JournalEntry { get; set; }
     // Pillars of the day Below. Think about potential refactor of meta organization
-    public String TodaysMessageToMyself { get; set; }
+    // public String TodaysMessageToMyself { get; set; }
     public String TodaysTopPriorities { get; set; }
     public String TasksThatMustBeDoneToday { get; set; }
     public String PersonsToConnectWithToday { get; set; }

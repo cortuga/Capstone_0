@@ -10,16 +10,19 @@ const Journal = () => {
   const [someoneToSurprise, setSomeoneToSurprise] = useState("")
   const [excellence, setExcellence] = useState("")
   const [boldAction, setBoldAction] = useState("")
+
   const [lifeMeta, setLifeMeta] = useState("")
   const [futureProjects, setFutureProjects] = useState("")
   const [successfulToday, setSuccessfulToday] = useState("")
+  // const [todaysMessage, setTodaysMessage] = useState("")
   const [topPriorities, setTopPriorities] = useState("")
   const [mustBeDoneToday, setMustBeDoneToday] = useState("")
+  const [connectToday, setConnectToday] = useState("")
 
   const handleSubmit = e => {
     e.preventDefault() //Considering I want this to take user to Journal history or take user to todo page, i shouldn't prevent default.
     const PostJournal = async () => {
-      const resp = await axios.Post("https://localhost:5001/api/Journal", {
+      const resp = await axios.Post("/api/Journal", {
         excitedAboutToday: excited,
         OneWordToDescribeMeToday: oneWord,
         WhoNeedsMeOnMyAGame: needsMe,
@@ -28,12 +31,13 @@ const Journal = () => {
         SomeoneToSurpriseWithAppreciation: someoneToSurprise,
         OneActionToDemonstrateExcellence: excellence,
         OneBoldActionToTakeToday: boldAction,
+
         LookingAtMyLifeMetaIWouldTellMyself: lifeMeta,
         ProjectsToKeepInMindForFutureAre: futureProjects,
         IWouldKnowTodayIsASuccessIf: successfulToday,
-        TodaysMessageToMyself: todaysMessage,
+        // TodaysMessageToMyself: todaysMessage,
         TodaysTopPriorities: topPriorities,
-        TasksThatMustBeDoneToday: mustBeDoneToday,
+        // TasksThatMustBeDoneToday: mustBeDoneToday,
         PersonsToConnectWithToday: connectToday
       })
       console.log(resp)
@@ -178,7 +182,7 @@ const Journal = () => {
                 : "My top 3 priorities or goals today are..."}
             </textarea>
 
-            <textarea
+            {/* <textarea
               rows='5'
               cols='50'
               onClick={e => setMustBeDone(e.target.value)}
@@ -186,11 +190,11 @@ const Journal = () => {
               {mustBeDoneToday
                 ? mustBeDoneToday
                 : "Tasks that must be done today"}
-            </textarea>
+            </textarea> */}
 
-            <textarea rows='5' cols='50' onClick={e => set(e.target.value)}>
+            {/* <textarea rows='5' cols='50' onClick={e => set(e.target.value)}>
               {replace ? replace : "persons to connect with"}
-            </textarea>
+            </textarea> */}
 
             <input type='submit' value='Submit' />
           </section>
