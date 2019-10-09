@@ -1,7 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 import axios from "axios"
 
 const LifeGoals = () => {
+  const [oneYearGoals, setOneYearGoals] = useState("")
+
+  const GetRequest = async () => {
+    const resp = await axios.get("")
+    console.log(resp.data)
+  }
+
   const PostSubmit = async () => {
     const resp = await axios.get("swagger url")
     console.log(resp.data)
