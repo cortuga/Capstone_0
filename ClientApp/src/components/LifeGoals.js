@@ -37,7 +37,7 @@ const LifeGoals = () => {
             <textarea
               rows='10'
               cols='50'
-              onChange={event => setOneYearGoals(e.target.value)}
+              onChange={event => setOneYearGoals(event.target.value)}
             >
               My goals for this year are... {oneYearGoals}
             </textarea>
