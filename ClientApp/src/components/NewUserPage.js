@@ -17,8 +17,6 @@ const NewUserPage = () => {
   const fetchUserProfile = async () => {
     const resp = await axios.get("https://localhost:5001/api/UserProfile")
     console.log(resp)
-
-    // setState(resp.data)
   }
 
   function handleSubmit(event) {
@@ -33,25 +31,37 @@ const NewUserPage = () => {
         onSubmit={handleSubmit}
         <label>
           Username:
-          <input type='text' name='username' />
+          <input
+            type='text'
+            name='username'
+            value={userName}
+            onChange={e => setUserName(e.target.value)}
+          />
         </label>
         <label>
           Password:
-          <input type='text' name='password' />
+          <input
+            type='text'
+            name='password'
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+          />
         </label>
         <label>
           Email:
-          <input type='text' name='email' />
+          <input
+            type='text'
+            name='email'
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
         </label>
         {/* <label>
           Name:
           <input type='text' name='name' />
         </label> */}
         <input type='submit' value='submit' />
-        <button
-          className='submit-button-profile'
-          onSubmit={handleSubmit(event.target.value)}
-        >
+        <button className='submit-button-profile' onSubmit={handleSubmit}>
           Create Profile
         </button>
       </form>
