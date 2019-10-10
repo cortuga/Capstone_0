@@ -23,7 +23,7 @@ const LifeGoals = () => {
   }
 
   const handleSubmit = event => {
-    e.preventDefault()
+    event.preventDefault()
     // console.log(resp.data)
     PutSubmit()
     // connect model to LTG state
@@ -37,7 +37,7 @@ const LifeGoals = () => {
             <textarea
               rows='10'
               cols='50'
-              onChange={e => setOneYearGoals(e.target.value)}
+              onChange={event => setOneYearGoals(e.target.value)}
             >
               My goals for this year are... {oneYearGoals}
             </textarea>
@@ -52,7 +52,7 @@ const LifeGoals = () => {
             <textarea
               rows='10'
               cols='50'
-              onChange={e => setThreeYearGoals(event.target.value)}
+              onChange={event => setThreeYearGoals(event.target.value)}
             >
               My goals 3 years from now are...
               {threeYearGoals}
@@ -63,7 +63,7 @@ const LifeGoals = () => {
             <textarea
               rows='10'
               cols='50'
-              onChange={e => setTenYearGoals(event.target.value)}
+              onChange={event => setTenYearGoals(event.target.value)}
             >
               My goals 10 years from now are...
               {tenYearGoals}
@@ -74,7 +74,7 @@ const LifeGoals = () => {
             <textarea
               rows='10'
               cols='50'
-              onChange={e => setLongTermGoals(event.target.value)}
+              onChange={event => setLongTermGoals(event.target.value)}
             >
               My Long Term Dreams are...
               {longTermGoals}
