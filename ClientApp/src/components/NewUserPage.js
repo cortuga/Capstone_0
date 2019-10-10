@@ -1,41 +1,59 @@
-import React from "react"
+import React, { useState } from "react"
+import axios from "axios"
 
 const NewUserPage = () => {
+  const [userName, setUserName] = useState("")
+  const [password, setPassword] = useState("")
+  const [email, setEmail] = useState("")
 
+  const PostNewUser = async () => {
+    const resp = await axios.Post("https://localhost:5001/api/UserProfile", {
+      UserName: userName,
+      Password: password,
+      Email: email
+    })
+  }
 
-  function handleSubmit(e) {
-    e.preventDefault()
+  const fetchUserProfile = async () => {
+    const resp = await axios.get("https://localhost:5001/api/UserProfile")
+    console.log(resp)
 
-     // const fetchunicorn = async () => {
-  //   const resp = await axios.get('swagger url')
-  //   console.log(resp.data or whatever)
+    // setState(resp.data)
+  }
 
-  //   setState (resp.data) 
-  // }
+  function handleSubmit(event) {
+    event.preventDefault()
+    PostNewUser()
+    // console.log()
   }
 
   return (
     <>
-      <form> onSubmit={handleSubmit}
+      <form>
+        onSubmit={handleSubmit}
         <label>
           Username:
-          <input type='text' username='username' />
+          <input type='text' name='username' />
         </label>
         <label>
           Password:
-          <input type='text' password='password' />
+          <input type='text' name='password' />
         </label>
         <label>
           Email:
-          <input type='text' email='email' />
+          <input type='text' name='email' />
         </label>
-        <label>
-          ?:
+        {/* <label>
+          Name:
           <input type='text' name='name' />
-        </label>
-        
+        </label> */}
         <input type='submit' value='submit' />
-        <button className='submit-button-profile' onSubmit={}>Create Profile</button>
+        <button
+          className='submit-button-profile'
+          onSubmit={handleSubmit(event.target.value)}
+        >
+          Create Profile
+        </button>
       </form>
     </>
   )

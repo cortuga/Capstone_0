@@ -9,6 +9,9 @@ const nav = () => {
       <nav>
         <h3>Nav bar</h3>
         <ul className='nav-links'>
+          <Link to='/components/LandingPage'>
+            <li>Home</li>
+          </Link>
           <Link to='/components/Journal'>
             <li>Journal</li>
           </Link>

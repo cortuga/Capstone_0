@@ -25,6 +25,9 @@ const LandingPage = () => {
         some of the most high performing individuals in the world today and
         bring some of that to your daily life.
       </p>
+      <button>
+        <Link to='/components/NewUserPage'></Link>
+      </button>
     </div>
   )
 }

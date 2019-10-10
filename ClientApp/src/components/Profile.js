@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState } from "react"
+import axios from "axios"
 
 const Profile = () => {
   //Create Axios call to heroku to get user information. Then parse out the JSON into variables with the convention below.
