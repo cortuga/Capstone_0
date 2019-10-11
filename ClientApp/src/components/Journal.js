@@ -22,7 +22,7 @@ const Journal = () => {
   const handleSubmit = e => {
     e.preventDefault() //Considering I want this to take user to Journal history or take user to todo page, i shouldn't prevent default.
     const PostJournal = async () => {
-      const resp = await axios.Post("/api/Journal", {
+      const resp = await axios.post("/api/Journal", {
         excitedAboutToday: excited,
         OneWordToDescribeMeToday: oneWord,
         WhoNeedsMeOnMyAGame: needsMe,
@@ -42,6 +42,7 @@ const Journal = () => {
       })
       console.log(resp)
     }
+    PostJournal()
   }
 
   return (

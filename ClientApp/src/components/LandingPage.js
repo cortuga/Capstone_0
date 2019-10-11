@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 const LandingPage = () => {
   return (
@@ -25,9 +26,8 @@ const LandingPage = () => {
         some of the most high performing individuals in the world today and
         bring some of that to your daily life.
       </p>
-      <button>
-        <Link to='/components/NewUserPage'></Link>
-      </button>
+
+      <Link to='/components/NewUserPage'>New User</Link>
     </div>
   )
 }
