@@ -37,9 +37,10 @@ const LifeGoals = () => {
             <textarea
               rows='10'
               cols='50'
+              value={oneYearGoals}
               onChange={event => setOneYearGoals(event.target.value)}
             >
-              My goals for this year are... {oneYearGoals}
+              My goals for this year are...
             </textarea>
           </label>
 
@@ -52,6 +53,7 @@ const LifeGoals = () => {
             <textarea
               rows='10'
               cols='50'
+              value={threeYearGoals}
               onChange={event => setThreeYearGoals(event.target.value)}
             >
               My goals 3 years from now are...
@@ -63,6 +65,7 @@ const LifeGoals = () => {
             <textarea
               rows='10'
               cols='50'
+              value={tenYearGoals}
               onChange={event => setTenYearGoals(event.target.value)}
             >
               My goals 10 years from now are...
@@ -74,6 +77,7 @@ const LifeGoals = () => {
             <textarea
               rows='10'
               cols='50'
+              value={longTermGoals}
               onChange={event => setLongTermGoals(event.target.value)}
             >
               My Long Term Dreams are...
