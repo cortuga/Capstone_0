@@ -12,10 +12,10 @@ const Profile = () => {
     const resp = await axios.get("https://localhost:5001/api/UserProfile")
     console.log(resp.data)
 
-    Username: username,
-    Password: password,
-    Email: email,
-    AccountCreated: accountCreated,
+    // Username: username,
+    // Password: password,
+    // Email: email,
+    // AccountCreated: accountCreated,
   }
 
   const GetDreamRequest = async () => {

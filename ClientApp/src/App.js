@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import LandingPage from "./components/LandingPage"
 import NewUserPage from "./components/NewUserPage"
 import "bulma"
+import auth from "./auth"
 
 export default class App extends Component {
   static displayName = App.name
@@ -40,6 +41,28 @@ export default class App extends Component {
               path='/components/NewUserPage'
               component={NewUserPage}
             ></Route>
+            <Route path='/login' render={() => auth.login()} />
+            <Route
+              path='/logout'
+              render={() => {
+                auth.logout()
+                return <p />
+              }}
+            />
+            <Route
+              path='/callback'
+              render={() => {
+                auth.handleAuthentication(() => {
+                  // // NOTE: Uncomment the following lines for using axios
+                  // //
+                  // // Set the axios authentication headers
+                  axios.defaults.headers.common = {
+                    Authorization: auth.authorizationHeader()
+                  }
+                })
+                return <p />
+              }}
+            />
           </Switch>
         </Router>
       </>

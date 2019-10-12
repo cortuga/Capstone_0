@@ -1,7 +1,7 @@
 import auth0 from 'auth0-js'
 import history from './history'
-const DOMAIN = 'OURAPP.auth0.com'
-const CLIENTID = 'xxxxxxxxx'
+const DOMAIN = 'dev-xq80kkr3.auth0.com'
+const CLIENTID = 'OgFOLoGNw0Exq55tO4cTnwME7sGI5NCU'
 class Auth {
   userProfile
   auth0 = new auth0.WebAuth({
@@ -9,7 +9,7 @@ class Auth {
     clientID: CLIENTID,
     redirectUri: `${window.location.protocol}//${
       window.location.host
-      }/callback`,
+    }/callback`,
     responseType: 'token id_token',
     scope: 'openid email profile'
   })
@@ -90,8 +90,8 @@ class Auth {
 const auth = new Auth()
 export default auth
 
-Create src / history.js
-Insert the following lines
+    Create src/history.js
+    Insert the following lines
 
 import { createBrowserHistory } from 'history'
 export default createBrowserHistory()
