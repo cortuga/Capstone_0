@@ -1,17 +1,15 @@
-import auth0 from 'auth0-js'
-import history from './history'
-const DOMAIN = 'dev-xq80kkr3.auth0.com'
-const CLIENTID = 'OgFOLoGNw0Exq55tO4cTnwME7sGI5NCU'
+import auth0 from "auth0-js"
+import history from "./history"
+const DOMAIN = "dev-xq80kkr3.auth0.com"
+const CLIENTID = "OgFOLoGNw0Exq55tO4cTnwME7sGI5NCU"
 class Auth {
   userProfile
   auth0 = new auth0.WebAuth({
     domain: DOMAIN,
     clientID: CLIENTID,
-    redirectUri: `${window.location.protocol}//${
-      window.location.host
-    }/callback`,
-    responseType: 'token id_token',
-    scope: 'openid email profile'
+    redirectUri: `${window.location.protocol}//${window.location.host}/callback`,
+    responseType: "token id_token",
+    scope: "openid email profile"
   })
   constructor() {
     this.login = this.login.bind(this)
@@ -24,11 +22,11 @@ class Auth {
   }
   logout() {
     // Clear Access Token and ID Token from local storage
-    localStorage.removeItem('access_token')
-    localStorage.removeItem('id_token')
-    localStorage.removeItem('expires_at')
+    localStorage.removeItem("access_token")
+    localStorage.removeItem("id_token")
+    localStorage.removeItem("expires_at")
     // navigate to the home route
-    history.replace('/')
+    history.replace("/")
   }
   handleAuthentication(callback) {
     this.auth0.parseHash((err, authResult) => {
@@ -37,9 +35,9 @@ class Auth {
         if (callback) {
           callback()
         }
-        history.replace('/')
+        history.replace("/")
       } else if (err) {
-        history.replace('/')
+        history.replace("/")
         console.log(err)
       }
     })
@@ -49,27 +47,27 @@ class Auth {
     let expiresAt = JSON.stringify(
       authResult.expiresIn * 1000 + new Date().getTime()
     )
-    localStorage.setItem('access_token', authResult.accessToken)
-    localStorage.setItem('id_token', authResult.idToken)
-    localStorage.setItem('expires_at', expiresAt)
+    localStorage.setItem("access_token", authResult.accessToken)
+    localStorage.setItem("id_token", authResult.idToken)
+    localStorage.setItem("expires_at", expiresAt)
   }
   isAuthenticated() {
     // Check whether the current time is past the
     // Access Token's expiry time
-    let expiresAt = JSON.parse(localStorage.getItem('expires_at'))
+    let expiresAt = JSON.parse(localStorage.getItem("expires_at"))
     return new Date().getTime() < expiresAt
   }
   getIdToken() {
-    const idToken = localStorage.getItem('id_token')
+    const idToken = localStorage.getItem("id_token")
     if (!idToken) {
-      throw new Error('No ID Token found')
+      throw new Error("No ID Token found")
     }
     return idToken
   }
   getAccessToken() {
-    const accessToken = localStorage.getItem('access_token')
+    const accessToken = localStorage.getItem("access_token")
     if (!accessToken) {
-      throw new Error('No Access Token found')
+      throw new Error("No Access Token found")
     }
     return accessToken
   }
@@ -89,9 +87,3 @@ class Auth {
 }
 const auth = new Auth()
 export default auth
-
-    Create src/history.js
-    Insert the following lines
-
-import { createBrowserHistory } from 'history'
-export default createBrowserHistory()

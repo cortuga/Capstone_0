@@ -27,8 +27,12 @@ const NewUserPage = () => {
 
   return (
     <>
-      <form>
-        onSubmit={handleSubmit}
+      <section>
+        <info>An object in motion stays in motion!</info>
+      </section>
+      <form
+      // onSubmit={handleSubmit}
+      >
         <label>
           Username:
           <input
@@ -60,7 +64,7 @@ const NewUserPage = () => {
           Name:
           <input type='text' name='name' />
         </label> */}
-        <input type='submit' value='submit' />
+        {/* <input type='submit' value='submit' /> */}
         <button className='submit-button-profile' onSubmit={handleSubmit}>
           Create Profile
         </button>

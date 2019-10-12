@@ -8,10 +8,11 @@ import Calender from "./components/Calender"
 import LifeGoals from "./components/LifeGoals"
 import Profile from "./components/Profile"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import axios from "axios"
 // import Testing from './Testing'
 import LandingPage from "./components/LandingPage"
 import NewUserPage from "./components/NewUserPage"
-import "bulma"
+// import "bulma/css/bulms.css"
 import auth from "./auth"
 
 export default class App extends Component {
@@ -27,11 +28,7 @@ export default class App extends Component {
         <Router>
           <Nav />
           <Switch>
-            <Route
-              exact
-              path='/components/LandingPage'
-              component={LandingPage}
-            />
+            <Route path='/components/LandingPage' component={LandingPage} />
             <Route path='/components/Journal' component={Journal} />
             <Route path='/components/Todos' component={Todos} />
             <Route path='/components/Calender' component={Calender} />

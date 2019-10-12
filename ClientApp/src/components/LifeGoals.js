@@ -84,6 +84,9 @@ const LifeGoals = () => {
               {longTermGoals}
             </textarea>
           </label>
+          <button className='submit-button-LG' onSubmit={handleSubmit}>
+            Remember Goals
+          </button>
         </form>
       </div>
     </>
