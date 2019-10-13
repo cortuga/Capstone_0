@@ -1,4 +1,11 @@
 import React from "react"
+import {Calender} from '@fullcalendar/core'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import '@fullcalendar/core/main.css';
+import '@fullcalendar/daygrid/main.css';
+import '@fullcalendar/timegrid/main.css';
+import '@fullcalendar/list/main.css';
+
 
 const Calender = () => {
   // const fetchunicorn = async () => {
@@ -10,7 +17,8 @@ const Calender = () => {
 
   return (
     <div>
-      <h1>Calender needs to go here</h1>
+      <FullCalender>
+      
     </div>
   )
 }
