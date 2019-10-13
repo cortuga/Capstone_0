@@ -10,7 +10,7 @@ const nav = () => {
       <nav>
         <h3>Nav bar</h3>
         <ul className='nav-links'>
-          <Link to='/LandingPage'>
+          <Link to='/'>
             <li>Home</li>
           </Link>
           <Link to='/Journal'>

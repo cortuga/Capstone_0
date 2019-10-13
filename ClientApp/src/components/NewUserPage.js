@@ -14,10 +14,10 @@ const NewUserPage = () => {
     })
   }
 
-  const fetchUserProfile = async () => {
-    const resp = await axios.get("https://localhost:5001/api/UserProfile")
-    console.log(resp)
-  }
+  // const fetchUserProfile = async () => {
+  //   const resp = await axios.get("https://localhost:5001/api/UserProfile")
+  //   console.log(resp)
+  // }
 
   function handleSubmit(event) {
     event.preventDefault()

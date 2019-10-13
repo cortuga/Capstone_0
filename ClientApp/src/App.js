@@ -9,33 +9,28 @@ import Calender from "./components/Calender"
 import LifeGoals from "./components/LifeGoals"
 import Profile from "./components/Profile"
 import axios from "axios"
-// import Testing from './Testing'
 import LandingPage from "./components/LandingPage"
 import NewUserPage from "./components/NewUserPage"
-// import "bulma/css/bulms.css"
 import auth from "./auth"
 
 export default class App extends Component {
   static displayName = App.name
-
-  // state = {
-
-  //    }
-
   render() {
     return (
       <>
         <Router>
+          <Nav />
           <Switch>
-            <Route path='/' component={LandingPage} />
+            <Route path='/' exact component={LandingPage} />
             <Route path='/Journal' component={Journal} />
             <Route path='/Todos' component={Todos} />
-            <Route exact path='/Calender' component={Calender} />
+            <Route path='/Calender' component={Calender} />
             <Route path='/LifeGoals' component={LifeGoals} />
             <Route path='/Profile' component={Profile} />
-            <Route path='/NewUserPage' component={NewUserPage}></Route>
+            <Route path='/NewUserPage' component={NewUserPage} />
             <Route path='/login' render={() => auth.login()} />
             <Route
+              exact
               path='/logout'
               render={() => {
                 auth.logout()
@@ -43,6 +38,7 @@ export default class App extends Component {
               }}
             />
             <Route
+              exact
               path='/callback'
               render={() => {
                 auth.handleAuthentication(() => {

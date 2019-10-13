@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import { Calendar, momentLocalizer } from "react-big-calendar"
 import moment from "moment"
 
+// Google Calender api
+
 const localizer = momentLocalizer(moment)
 // Purposely left myEventsList blank to avoid error. Will Fix later!!!!
 const myEventsList = []
