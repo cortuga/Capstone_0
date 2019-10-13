@@ -1,26 +1,11 @@
 import React from "react"
-import {Calender} from '@fullcalendar/core'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import '@fullcalendar/core/main.css';
-import '@fullcalendar/daygrid/main.css';
-import '@fullcalendar/timegrid/main.css';
-import '@fullcalendar/list/main.css';
+import FullCalendar from "@fullcalendar/react"
+import dayGridPlugin from "@fullcalendar/daygrid"
 
+// import "./main.scss" // webpack must be configured to do this
 
-const Calender = () => {
-  // const fetchunicorn = async () => {
-  //   const resp = await axios.get('swagger url')
-  //   console.log(resp.data or whatever)
-
-  //   setState (resp.data)
-  // }
-
-  return (
-    <div>
-      <FullCalender>
-      
-    </div>
-  )
+export default class DemoApp extends React.Component {
+  render() {
+    return <FullCalendar defaultView='dayGridMonth' plugins={[dayGridPlugin]} />
+  }
 }
-
-export default Calender
