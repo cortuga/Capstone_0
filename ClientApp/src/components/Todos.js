@@ -25,8 +25,8 @@ export default function Todos() {
   }
 
   const PostTodos = async () => {
-    const resp = await axios.post("https://localhost:5001/api/Todo"
-    }
+    const resp = await axios.post("https://localhost:5001/api/Todo")
+  }
 
   // const fetchUnicorn = async () => {
   //   const resp = await axios.get('swagger url')
