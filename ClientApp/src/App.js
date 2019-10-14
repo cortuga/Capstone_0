@@ -1,13 +1,13 @@
 import React, { Component } from "react"
 // import { Home } from './components/Home'
 // import { FetchData } from './components/FetchData'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Nav from "./components/Nav"
 import Journal from "./components/Journal"
 import Todos from "./components/Todos"
 import Calender from "./components/Calender"
 import LifeGoals from "./components/LifeGoals"
 import Profile from "./components/Profile"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import axios from "axios"
 // import Testing from './Testing'
 import LandingPage from "./components/LandingPage"
@@ -26,18 +26,14 @@ export default class App extends Component {
     return (
       <>
         <Router>
-          <Nav />
           <Switch>
-            <Route path='/components/LandingPage' component={LandingPage} />
-            <Route path='/components/Journal' component={Journal} />
-            <Route path='/components/Todos' component={Todos} />
-            <Route path='/components/Calender' component={Calender} />
-            <Route path='/components/LifeGoals' component={LifeGoals} />
-            <Route path='/components/Profile' component={Profile} />
-            <Route
-              path='/components/NewUserPage'
-              component={NewUserPage}
-            ></Route>
+            <Route path='/' component={LandingPage} />
+            <Route path='/Journal' component={Journal} />
+            <Route path='/Todos' component={Todos} />
+            <Route exact path='/Calender' component={Calender} />
+            <Route path='/LifeGoals' component={LifeGoals} />
+            <Route path='/Profile' component={Profile} />
+            <Route path='/NewUserPage' component={NewUserPage}></Route>
             <Route path='/login' render={() => auth.login()} />
             <Route
               path='/logout'

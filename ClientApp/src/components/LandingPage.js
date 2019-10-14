@@ -1,9 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import Nav from "./Nav"
 
 const LandingPage = () => {
   return (
     <div>
+      <Nav />
       <h1>Welcome!</h1>
 
       <h2>Defining your day and your future:</h2>

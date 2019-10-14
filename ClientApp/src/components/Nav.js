@@ -10,22 +10,22 @@ const nav = () => {
       <nav>
         <h3>Nav bar</h3>
         <ul className='nav-links'>
-          <Link to='/components/LandingPage'>
+          <Link to='/LandingPage'>
             <li>Home</li>
           </Link>
-          <Link to='/components/Journal'>
+          <Link to='/Journal'>
             <li>Journal</li>
           </Link>
-          <Link to='/components/Todos'>
+          <Link to='/Todos'>
             <li>To-do</li>
           </Link>
-          <Link to='/components/Calender'>
+          <Link to='/Calender'>
             <li>Calender</li>
           </Link>
-          <Link to='/components/LifeGoals'>
+          <Link to='/LifeGoals'>
             <li>Life Goals</li>
           </Link>
-          <Link to='/components/Profile'>
+          <Link to='/Profile'>
             <li>Profile</li>
           </Link>
         </ul>

@@ -1,11 +1,24 @@
-import React from "react"
-import FullCalendar from "@fullcalendar/react"
-import dayGridPlugin from "@fullcalendar/daygrid"
+import React, { Component } from "react"
+import { Calendar, momentLocalizer } from "react-big-calendar"
+import moment from "moment"
 
-// import "./main.scss" // webpack must be configured to do this
+const localizer = momentLocalizer(moment)
+// Purposely left myEventsList blank to avoid error. Will Fix later!!!!
+const myEventsList = []
 
-export default class DemoApp extends React.Component {
+export class Calender extends Component {
   render() {
-    return <FullCalendar defaultView='dayGridMonth' plugins={[dayGridPlugin]} />
+    return (
+      <>
+        <Calendar
+          localizer={localizer}
+          events={myEventsList}
+          startAccessor='start'
+          endAccessor='end'
+        />
+      </>
+    )
   }
 }
+
+export default Calender
