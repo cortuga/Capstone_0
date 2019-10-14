@@ -22,14 +22,15 @@ const LifeGoals = () => {
     console.log(resp)
   }
 
-  // const PostLifeGoals = async () => {
-  //   const resp = await axios.post("https://localhost:5001/api/LongTermGoals"
-  //   }
+  const PostLifeGoals = async () => {
+    const resp = await axios.post("https://localhost:5001/api/LongTermGoals")
+  }
 
   const handleSubmit = event => {
     event.preventDefault()
     // console.log(resp.data)
     PutSubmit()
+    PostLifeGoals()
     // connect model to LTG state
   }
 
