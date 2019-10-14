@@ -16,7 +16,7 @@ const Journal = () => {
   const [successfulToday, setSuccessfulToday] = useState("")
   // const [todaysMessage, setTodaysMessage] = useState("")
   const [topPriorities, setTopPriorities] = useState("")
-  const [mustBeDoneToday, setMustBeDoneToday] = useState("")
+  // const [mustBeDoneToday, setMustBeDoneToday] = useState("")
   const [connectToday, setConnectToday] = useState("")
 
   const handleSubmit = e => {

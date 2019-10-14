@@ -29,8 +29,8 @@ const LifeGoals = () => {
   const handleSubmit = event => {
     event.preventDefault()
     // console.log(resp.data)
-    PutSubmit()
     PostLifeGoals()
+    PutSubmit()
     // connect model to LTG state
   }
 
@@ -42,10 +42,10 @@ const LifeGoals = () => {
             <textarea
               rows='10'
               cols='50'
-              value={oneYearGoals}
+              // value={oneYearGoals}
               onChange={event => setOneYearGoals(event.target.value)}
             >
-              My goals for this year are...
+              {oneYearGoals ? oneYearGoals : "My goals for this year are..."}
             </textarea>
           </label>
 
@@ -58,11 +58,12 @@ const LifeGoals = () => {
             <textarea
               rows='10'
               cols='50'
-              value={threeYearGoals}
+              // value={threeYearGoals}
               onChange={event => setThreeYearGoals(event.target.value)}
             >
-              My goals 3 years from now are...
-              {threeYearGoals}
+              {threeYearGoals
+                ? threeYearGoals
+                : "My goals 3 years from now are..."}
             </textarea>
           </label>
 
@@ -70,11 +71,12 @@ const LifeGoals = () => {
             <textarea
               rows='10'
               cols='50'
-              value={tenYearGoals}
+              // value={tenYearGoals}
               onChange={event => setTenYearGoals(event.target.value)}
             >
-              My goals 10 years from now are...
-              {tenYearGoals}
+              {tenYearGoals
+                ? tenYearGoals
+                : "My goals 10 years from now are..."}
             </textarea>
           </label>
 
@@ -82,11 +84,10 @@ const LifeGoals = () => {
             <textarea
               rows='10'
               cols='50'
-              value={longTermGoals}
+              // value={longTermGoals}
               onChange={event => setLongTermGoals(event.target.value)}
             >
-              My Long Term Dreams are...
-              {longTermGoals}
+              {longTermGoals ? longTermGoals : "My Long Term Dreams are..."}
             </textarea>
           </label>
           <button className='submit-button-LG' onSubmit={handleSubmit}>

@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Calendar, momentLocalizer } from "react-big-calendar"
 import moment from "moment"
+import "./index.scss"
 
 // Google Calender api
 

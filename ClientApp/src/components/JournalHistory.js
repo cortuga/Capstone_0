@@ -26,7 +26,7 @@ const JournalHistory = () => {
               {e.accountCreated &&
                 moment(e.accountCreated).format("MMMM Do YY, h:mm:ss a")}
             </h4>
-            <li>{e.excitedAboutToday}</li>
+            <li>Excited About Today? {e.excitedAboutToday}</li>
             <li>{e.oneWordToDescribeMeToday}</li>
             <li>{e.whoNeedsMeOnMyAGame}</li>
             <li>{e.WhatMightStressMeOut}</li>
