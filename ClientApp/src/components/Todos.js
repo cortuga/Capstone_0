@@ -6,15 +6,19 @@ export default function Todos() {
   const [todos, setTodos] = useState([{ id: 1, text: "default_todos_text" }])
 
   function handleNewTodoChange(e) {
-    e.preventDefault()
     setNewTodo(e.target.value)
   }
 
   const handleNewTodo = e => {
     e.preventDefault() //grabs the current state of newTodo
     if (newTodo === "") return //if newtodo is empty then return and do nothing
-    setTodos([...todos, { id: Date.now(), text: newTodo }])
-    e.target.reset() //resets the form
+
+    setTodos(prev => {
+      prev.push({ id: Date.now(), text: newTodo })
+      return [...prev]
+    })
+
+    // e.target.reset() //resets the form
     // console.log(newTodo)
   }
 
@@ -45,19 +49,16 @@ export default function Todos() {
           placeholder='Your todo...'
           onChange={handleNewTodoChange}
         ></input>
-
-        <ul class='container'>
-          {todos.map(todo => (
-            <li key={todo.id} className='todo-li'>
-              {todo.text}
-              <a href='/Todos' onClick={() => removeTodo(todo.id)}>
-                Delete
-              </a>
-            </li>
-          ))}
-        </ul>
         <input class='button' type='submit' value='Submit' />
       </form>
+      <ul class='container'>
+        {todos.map(todo => (
+          <li key={todo.id} className='todo-li'>
+            {todo.text}
+            <button onClick={() => removeTodo(todo.id)}>Delete</button>
+          </li>
+        ))}
+      </ul>
 
       <section class='section'>
         <h1 class='subtitle has-text-centered'>Past Todos</h1>
