@@ -3,7 +3,10 @@ import axios from "axios"
 
 export default function Todos() {
   const [newTodo, setNewTodo] = useState("")
-  const [todos, setTodos] = useState([{ id: 1, text: "default_todos_text" }])
+  const [todos, setTodos] = useState([
+    { id: 1, text: "Something you need to remember / get done  " }
+  ])
+  const [pastTodos, setPastTodos] = useState([])
 
   function handleNewTodoChange(e) {
     setNewTodo(e.target.value)
@@ -12,11 +15,9 @@ export default function Todos() {
   const handleNewTodo = e => {
     e.preventDefault() //grabs the current state of newTodo
     if (newTodo === "") return //if newtodo is empty then return and do nothing
+    const _newTodo = { text: newTodo }
 
-    setTodos(prev => {
-      prev.push({ id: Date.now(), text: newTodo })
-      return [...prev]
-    })
+    PostTodos(_newTodo)
 
     e.target.reset() //resets the form
     // console.log(newTodo)
@@ -25,14 +26,25 @@ export default function Todos() {
   function removeTodo(id) {
     // e.preventDefault()
     setTodos(todos.filter(todo => todo.id !== id))
-
+    DeleteTodos()
     // console.log(todo.id, id)
   }
 
-  const PostTodos = async () => {
+  const DeleteTodos = async () => {
+    const resp = await axios.delete(
+      `https://localhost:5001/api/Todo/${todos.id}`
+    )
+    console.log(resp)
+  }
+
+  const PostTodos = async newToDoItem => {
     const resp = await axios
-      .post("https://localhost:5001/api/Todo", todos)
+      .post("https://localhost:5001/api/Todo", newToDoItem)
       .then(resp => {
+        setTodos(prev => {
+          prev.push(resp.data)
+          return [...prev]
+        })
         console.log(resp)
       })
   }
@@ -40,10 +52,12 @@ export default function Todos() {
   const GetTodos = async () => {
     const resp = await axios.get("https://localhost:5001/api/Todo")
     console.log(resp.data)
+    setTodos(resp.data)
   }
 
   useEffect(() => {
     PostTodos()
+    GetTodos()
   }, [])
 
   // const fetchUnicorn = async () => {
@@ -77,6 +91,15 @@ export default function Todos() {
 
       <section class='section'>
         <h1 class='subtitle has-text-centered'>Past Todos</h1>
+        <div>
+          {pastTodos.map((ele, i) => {
+            return (
+              <ul key={i}>
+                <li class='list'>{ele.pastTodos}</li>
+              </ul>
+            )
+          })}
+        </div>
       </section>
     </>
   )
