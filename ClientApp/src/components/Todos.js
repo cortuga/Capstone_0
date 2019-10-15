@@ -37,7 +37,7 @@ export default function Todos() {
 
   return (
     <>
-      <h1>Todos</h1>
+      <h1 class='has-text-centered subtitle'>Todos</h1>
       <form onSubmit={handleNewTodo}>
         <input
           class='input is-rounded'
@@ -45,7 +45,7 @@ export default function Todos() {
           onChange={handleNewTodoChange}
         ></input>
 
-        <ul className='todolist-ul'>
+        <ul class='container'>
           {todos.map(todo => (
             <li key={todo.id} className='todo-li'>
               {todo.text}
@@ -55,7 +55,7 @@ export default function Todos() {
             </li>
           ))}
         </ul>
-        <input type='submit' value='Submit' />
+        <input class='' type='submit' value='Submit' />
       </form>
     </>
   )

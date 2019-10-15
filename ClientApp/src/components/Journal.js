@@ -47,7 +47,7 @@ const Journal = () => {
 
   return (
     <>
-      <section className='has-text-centered'>
+      <section class='has-text-centered'>
         <div>
           <h2 class='subtitle'>Morning Mindset:</h2>
         </div>

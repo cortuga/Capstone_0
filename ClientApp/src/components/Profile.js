@@ -31,6 +31,8 @@ const Profile = () => {
       <h2>Email: {email}</h2>
       <h2>Date Created: {accountCreated}</h2>
       {/* <h2>Dream: {Dream}</h2> */}
+
+      <footer>Made with at SDG</footer>
     </div>
   )
 }

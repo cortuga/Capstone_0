@@ -36,7 +36,8 @@ const LifeGoals = () => {
 
   return (
     <>
-      <div>
+      <div class='has-text-centered'>
+        <h1 class='subtitle'>Life Goals</h1>
         <form onSubmit={handleSubmit}>
           <label>
             <textarea
@@ -49,8 +50,8 @@ const LifeGoals = () => {
             </textarea>
           </label>
 
-          <p>
-            We tend to overestimate what we're able to do in 1 year but
+          <p class='section'>
+            Note: We tend to overestimate what we're able to do in 1 year but
             underestimate what we can do in 3.
           </p>
 
