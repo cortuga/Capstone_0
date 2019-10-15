@@ -49,7 +49,7 @@ const Journal = () => {
     <>
       <section className='has-text-centered'>
         <div>
-          <h2>Morning Mindset:</h2>
+          <h2 class='subtitle'>Morning Mindset:</h2>
         </div>
         <form onSubmit={handleSubmit}>
           <section>

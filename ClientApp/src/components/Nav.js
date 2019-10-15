@@ -7,7 +7,7 @@ import React from "react"
 const nav = () => {
   return (
     <>
-      <nav>
+      <nav class='tabs'>
         <section class='hero'>
           <div class='hero-body'>
             <div class='container'>

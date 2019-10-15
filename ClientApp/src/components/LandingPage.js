@@ -5,35 +5,41 @@ import JournalHistory from "./JournalHistory"
 
 const LandingPage = () => {
   return (
-    <div>
+    <div class='section'>
       {/* <Nav /> */}
-      <h1 className='has-text-centered'>Welcome!</h1>
+      <h1 className='has-text-centered title hero'>Welcome!</h1>
 
-      <h2>Defining your day and your future:</h2>
-      <p>
-        I define high performance as reaching your personal goals with a
-        balanced life, maintaining well being and positive relationships. That
-        last part is important. People often assume you have to compromise your
-        health or relationships in order to succeed but I disagree. I believe
-        with the right habits and daily pracitices, you can achieve your dreams,
-        out perform your yesterdays and grow faster then you ever imagined, and
-        strive with true joy and fulfillment. Of course everyone wants something
-        along these lines. But few people create the right mindset, set real
-        priorities, define what's meaningful to them, and review their day and
-        performance in measurable ways that can propel their growth. I've found
-        that so many people don't ever work on the basic planning and
-        prioritization strageties that so often lead to long-term success or
-        self cultivation. That's why I created The Compass. I wanted you to have
-        a proven and strategic approach to developing yourself and achieving
-        your goals. I wanted to help instill thinking patterns and practices of
-        some of the most high performing individuals in the world today and
-        bring some of that to your daily life.
+      <h2 class='subtitle'>Defining your day and your future:</h2>
+      <p class='section'>
+        I define <strong>high performance</strong> as reaching your personal
+        goals with a balanced life, maintaining well being and positive
+        relationships. That last part is important. People often assume you have
+        to compromise your health or relationships in order to succeed in high
+        degrees but I disagree. I believe with the right habits and daily
+        practices, you can{" "}
+        <strong>
+          achieve your dreams, out perform your yesterdays and grow faster{" "}
+        </strong>{" "}
+        then you ever imagined and strive with true joy and fulfillment. Of
+        course everyone wants something along these lines. But few people create
+        the right mindset, set real priorities, define what's meaningful to
+        them, and review their day and performance in measurable ways that can
+        propel their growth. I've found that so many people don't ever work on
+        the basic planning and prioritization strategies that so often lead to
+        long-term success or self cultivation. That's why I created The Compass.
+        I wanted you to have a proven and strategic approach to developing
+        yourself and achieving your goals. I wanted to help instill thinking
+        patterns and practices of some of the most high performing individuals
+        in the world today and bring some of that to your daily life.
       </p>
-
-      <Link to='/NewUserPage'>New User</Link>
+      <section class='section'>
+        <button class='has-text-centered'>
+          <Link to='/NewUserPage'>New User</Link>
+        </button>
+      </section>
 
       <section>
-        <h2>Previous Mindset / Journal</h2>
+        <h2 class='container subtitle'>Previous Mindset / Journal</h2>
         <JournalHistory />
       </section>
     </div>
