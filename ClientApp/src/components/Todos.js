@@ -55,7 +55,9 @@ export default function Todos() {
         {todos.map(todo => (
           <li key={todo.id} className='todo-li'>
             {todo.text}
-            <button onClick={() => removeTodo(todo.id)}>Delete</button>
+            <button class='button' onClick={() => removeTodo(todo.id)}>
+              Delete
+            </button>
           </li>
         ))}
       </ul>
