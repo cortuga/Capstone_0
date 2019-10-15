@@ -14,7 +14,7 @@ const Journal = () => {
   const [lifeMeta, setLifeMeta] = useState("")
   const [futureProjects, setFutureProjects] = useState("")
   const [successfulToday, setSuccessfulToday] = useState("")
-  // const [todaysMessage, setTodaysMessage] = useState("")
+  const [todaysMessage, setTodaysMessage] = useState("")
   const [topPriorities, setTopPriorities] = useState("")
   // const [mustBeDoneToday, setMustBeDoneToday] = useState("")
   const [connectToday, setConnectToday] = useState("")
@@ -35,7 +35,7 @@ const Journal = () => {
         LookingAtMyLifeMetaIWouldTellMyself: lifeMeta,
         ProjectsToKeepInMindForFutureAre: futureProjects,
         IWouldKnowTodayIsASuccessIf: successfulToday,
-        // TodaysMessageToMyself: todaysMessage,
+        TodaysMessageToMyself: todaysMessage,
         TodaysTopPriorities: topPriorities,
         // TasksThatMustBeDoneToday: mustBeDoneToday,
         PersonsToConnectWithToday: connectToday
@@ -47,13 +47,20 @@ const Journal = () => {
 
   return (
     <>
-      <div>
-        <h2>Morning Mindset:</h2>
+      <section className='has-text-centered'>
+        <div>
+          <h2>Morning Mindset:</h2>
+        </div>
         <form onSubmit={handleSubmit}>
           <section>
             <label>
-              <textarea rows='5' cols='50'>
-                Today's Message to Myself:
+              <textarea
+                className='textarea'
+                rows='5'
+                cols='50'
+                onChange={e => setTodaysMessage(e.target.value)}
+              >
+                {todaysMessage ? todaysMessage : "Today's Message to Myself"}
               </textarea>
             </label>
 
@@ -64,6 +71,7 @@ const Journal = () => {
             {/* Want to make the Top 3 goals passed to the Todos component */}
 
             <textarea
+              className='textarea'
               rows='5'
               cols='50'
               onChange={e => setExcited(e.target.value)}
@@ -74,6 +82,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
+              className='textarea'
               rows='5'
               cols='50'
               onChange={e => setOneWord(e.target.value)}
@@ -84,6 +93,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
+              className='textarea'
               rows='5'
               cols='50'
               onChange={e => setNeedsMe(e.target.value)}
@@ -94,6 +104,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
+              className='textarea'
               rows='5'
               cols='50'
               onChange={e => setStressMeOut(e.target.value)}
@@ -104,6 +115,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
+              className='textarea'
               rows='5'
               cols='50'
               onChange={e => setBestSelf(e.target.value)}
@@ -114,6 +126,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
+              className='textarea'
               rows='5'
               cols='50'
               onChange={e => setSomeoneToSurprise(e.target.value)}
@@ -124,6 +137,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
+              className='textarea'
               rows='5'
               cols='50'
               onChange={e => setExcellence(e.target.value)}
@@ -134,6 +148,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
+              className='textarea'
               rows='5'
               cols='50'
               onClick={e => setBoldAction(e.target.value)}
@@ -144,6 +159,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
+              className='textarea'
               rows='5'
               cols='50'
               onClick={e => setLifeMeta(e.target.value)}
@@ -154,6 +170,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
+              className='textarea'
               rows='5'
               cols='50'
               onClick={e => setFutureProjects(e.target.value)}
@@ -164,6 +181,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
+              className='textarea'
               rows='5'
               cols='50'
               onClick={e => setSuccessfulToday(e.target.value)}
@@ -174,6 +192,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
+              className='textarea'
               rows='5'
               cols='50'
               onClick={e => setTopPriorities(e.target.value)}
@@ -208,7 +227,7 @@ const Journal = () => {
             </label>
           </section>
         </form>
-      </div>
+      </section>
     </>
   )
 }

@@ -38,6 +38,7 @@ const NewUserPage = () => {
           <input
             type='text'
             name='username'
+            placeholder='Alex Smith'
             value={userName}
             onChange={e => setUserName(e.target.value)}
           />
@@ -47,6 +48,7 @@ const NewUserPage = () => {
           <input
             type='text'
             name='password'
+            placeholder='elephant1988'
             value={password}
             onChange={e => setPassword(e.target.value)}
           />
@@ -56,18 +58,63 @@ const NewUserPage = () => {
           <input
             type='text'
             name='email'
+            placeholder='abc123@gmail.com'
             value={email}
             onChange={e => setEmail(e.target.value)}
           />
         </label>
+
+        <div class='field'>
+          <p class='control has-icons-left'>
+            <span class='select'>
+              <select>
+                <option selected>Country</option>
+                <option>Select dropdown</option>
+                <option>With options</option>
+              </select>
+            </span>
+            <span class='icon is-small is-left'>
+              <i class='fas fa-globe'></i>
+            </span>
+          </p>
+        </div>
+
         {/* <label>
           Name:
           <input type='text' name='name' />
         </label> */}
         {/* <input type='submit' value='submit' /> */}
-        <button className='submit-button-profile' onSubmit={handleSubmit}>
-          Create Profile
-        </button>
+        <div class='field'>
+          <label class='label'>Subject</label>
+          <div class='control'>
+            <div class='select'>
+              <select>
+                <option>Select dropdown</option>
+                <option>With options</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class='field'>
+          <div class='control'>
+            <label class='checkbox'>
+              <input type='checkbox' />I agree to the
+              <a href='#'>terms and conditions</a>
+            </label>
+          </div>
+        </div>
+
+        <div class='field is-grouped'>
+          <div class='control'>
+            <button class='button is-link' onSubmit={handleSubmit}>
+              Submit
+            </button>
+          </div>
+          <div class='control'>
+            <button class='button is-text'>Cancel</button>
+          </div>
+        </div>
       </form>
     </>
   )

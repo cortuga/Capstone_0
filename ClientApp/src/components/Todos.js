@@ -40,6 +40,7 @@ export default function Todos() {
       <h1>Todos</h1>
       <form onSubmit={handleNewTodo}>
         <input
+          class='input is-rounded'
           placeholder='Your todo...'
           onChange={handleNewTodoChange}
         ></input>

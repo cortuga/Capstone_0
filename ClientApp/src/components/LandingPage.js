@@ -7,7 +7,7 @@ const LandingPage = () => {
   return (
     <div>
       {/* <Nav /> */}
-      <h1>Welcome!</h1>
+      <h1 className='has-text-centered'>Welcome!</h1>
 
       <h2>Defining your day and your future:</h2>
       <p>

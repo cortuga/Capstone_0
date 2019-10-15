@@ -8,8 +8,18 @@ const nav = () => {
   return (
     <>
       <nav>
-        <h3>Nav bar</h3>
-        <ul className='nav-links'>
+        <section class='hero'>
+          <div class='hero-body'>
+            <div class='container'>
+              <h1 class='title'>Compass</h1>
+              <h2 class='subtitle'>
+                Defining your Day to Navigate your Future
+              </h2>
+            </div>
+          </div>
+        </section>
+
+        <ul className='nav-links has-text-centered '>
           <Link to='/'>
             <li>Home</li>
           </Link>

@@ -12,6 +12,7 @@ import axios from "axios"
 import LandingPage from "./components/LandingPage"
 import NewUserPage from "./components/NewUserPage"
 import auth from "./auth"
+import "bulma/css/bulma.css"
 
 export default class App extends Component {
   static displayName = App.name
