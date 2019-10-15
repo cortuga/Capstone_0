@@ -52,7 +52,7 @@ const Journal = () => {
           <h2 class='subtitle'>Morning Mindset:</h2>
         </div>
         <form onSubmit={handleSubmit}>
-          <section>
+          <section class='container'>
             <label>
               <textarea
                 className='textarea'
@@ -219,7 +219,7 @@ const Journal = () => {
             <input type='submit' value='Submit' />
           </section>
 
-          <section>
+          <section class='section'>
             <label>
               <h3>Already have a journal entry written?</h3>
               <h4>Upload that file</h4>
