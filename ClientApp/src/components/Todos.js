@@ -19,8 +19,9 @@ export default function Todos() {
   }
 
   function removeTodo(id) {
-    // e.preventDefault
+    // e.preventDefault()
     setTodos(todos.filter(todo => todo.id !== id))
+
     // console.log(todo.id, id)
   }
 
@@ -57,6 +58,10 @@ export default function Todos() {
         </ul>
         <input class='button' type='submit' value='Submit' />
       </form>
+
+      <section class='section'>
+        <h1 class='subtile has-text-centered'>Past Todos</h1>
+      </section>
     </>
   )
 }
