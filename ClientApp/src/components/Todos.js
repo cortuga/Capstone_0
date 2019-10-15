@@ -25,15 +25,13 @@ export default function Todos() {
 
   function removeTodo(id) {
     // e.preventDefault()
+    DeleteTodos(id)
     setTodos(todos.filter(todo => todo.id !== id))
-    DeleteTodos()
     // console.log(todo.id, id)
   }
 
-  const DeleteTodos = async () => {
-    const resp = await axios.delete(
-      `https://localhost:5001/api/Todo/${todos.id}`
-    )
+  const DeleteTodos = async todoId => {
+    const resp = await axios.delete(`https://localhost:5001/api/Todo/${todoId}`)
     console.log(resp)
   }
 
@@ -60,13 +58,6 @@ export default function Todos() {
     GetTodos()
   }, [])
 
-  // const fetchUnicorn = async () => {
-  //   const resp = await axios.get('swagger url')
-  //   console.log(resp.data or whatever)
-
-  //   setState (resp.data)
-  // }
-
   return (
     <>
       <h1 class='has-text-centered subtitle'>Todos</h1>
@@ -89,7 +80,7 @@ export default function Todos() {
         ))}
       </ul>
 
-      <section class='section'>
+      {/* <section class='section'>
         <h1 class='subtitle has-text-centered'>Past Todos</h1>
         <div>
           {pastTodos.map((ele, i) => {
@@ -100,7 +91,7 @@ export default function Todos() {
             )
           })}
         </div>
-      </section>
+      </section> */}
     </>
   )
 }
