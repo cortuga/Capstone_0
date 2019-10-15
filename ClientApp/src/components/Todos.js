@@ -50,7 +50,7 @@ export default function Todos() {
           {todos.map(todo => (
             <li key={todo.id} className='todo-li'>
               {todo.text}
-              <a href='#' onClick={() => removeTodo(todo.id)}>
+              <a href='/Todos' onClick={() => removeTodo(todo.id)}>
                 Delete
               </a>
             </li>
@@ -60,7 +60,7 @@ export default function Todos() {
       </form>
 
       <section class='section'>
-        <h1 class='subtile has-text-centered'>Past Todos</h1>
+        <h1 class='subtitle has-text-centered'>Past Todos</h1>
       </section>
     </>
   )
