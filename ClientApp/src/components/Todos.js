@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import axios from "axios"
 
 export default function Todos() {
@@ -18,7 +18,7 @@ export default function Todos() {
       return [...prev]
     })
 
-    // e.target.reset() //resets the form
+    e.target.reset() //resets the form
     // console.log(newTodo)
   }
 
@@ -30,8 +30,21 @@ export default function Todos() {
   }
 
   const PostTodos = async () => {
-    const resp = await axios.post("https://localhost:5001/api/Todo")
+    const resp = await axios
+      .post("https://localhost:5001/api/Todo", todos)
+      .then(resp => {
+        console.log(resp)
+      })
   }
+
+  const GetTodos = async () => {
+    const resp = await axios.get("https://localhost:5001/api/Todo")
+    console.log(resp.data)
+  }
+
+  useEffect(() => {
+    PostTodos()
+  }, [])
 
   // const fetchUnicorn = async () => {
   //   const resp = await axios.get('swagger url')
@@ -55,7 +68,7 @@ export default function Todos() {
         {todos.map(todo => (
           <li key={todo.id} className='todo-li'>
             {todo.text}
-            <button class='button' onClick={() => removeTodo(todo.id)}>
+            <button class='button is-light' onClick={() => removeTodo(todo.id)}>
               Delete
             </button>
           </li>
