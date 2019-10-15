@@ -33,7 +33,7 @@ const LandingPage = () => {
         in the world today and bring some of that to your daily life.
       </p>
       <section class='section'>
-        <button class='has-text-centered'>
+        <button class='button is light'>
           <Link to='/NewUserPage'>New User</Link>
         </button>
       </section>

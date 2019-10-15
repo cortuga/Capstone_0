@@ -38,7 +38,7 @@ export default function Todos() {
   return (
     <>
       <h1 class='has-text-centered subtitle'>Todos</h1>
-      <form onSubmit={handleNewTodo}>
+      <form class='section' onSubmit={handleNewTodo}>
         <input
           class='input is-rounded'
           placeholder='Your todo...'
@@ -55,7 +55,7 @@ export default function Todos() {
             </li>
           ))}
         </ul>
-        <input class='' type='submit' value='Submit' />
+        <input class='button' type='submit' value='Submit' />
       </form>
     </>
   )

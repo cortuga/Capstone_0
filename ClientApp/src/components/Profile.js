@@ -24,16 +24,20 @@ const Profile = () => {
   }
 
   return (
-    <div>
-      <p>Profile page</p>
-      <h1>Username:{username}</h1>
-      <h2>Password:{password}</h2>
-      <h2>Email: {email}</h2>
-      <h2>Date Created: {accountCreated}</h2>
-      {/* <h2>Dream: {Dream}</h2> */}
+    <>
+      <div class='container'>
+        <p class='subtitle'>Profile page</p>
+        <h1 class='text'>Username:{username}</h1>
+        <h2 class='password'>Password:{password}</h2>
+        <h2>Email: {email}</h2>
+        <h2>Date Created: {accountCreated}</h2>
+        {/* <h2>Dream: {Dream}</h2> */}
 
-      <footer>Made with at SDG</footer>
-    </div>
+        <div class='has-text-centered section container'>
+          <footer>Made with 💛 at SDG</footer>
+        </div>
+      </div>
+    </>
   )
 }
 

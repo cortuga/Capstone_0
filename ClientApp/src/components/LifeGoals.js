@@ -91,7 +91,7 @@ const LifeGoals = () => {
               {longTermGoals ? longTermGoals : "My Long Term Dreams are..."}
             </textarea>
           </label>
-          <button className='submit-button-LG' onSubmit={handleSubmit}>
+          <button class='button is-light' onSubmit={handleSubmit}>
             Remember Goals
           </button>
         </form>

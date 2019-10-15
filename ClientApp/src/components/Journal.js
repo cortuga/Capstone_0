@@ -60,7 +60,7 @@ const Journal = () => {
                 cols='50'
                 onChange={e => setTodaysMessage(e.target.value)}
               >
-                {todaysMessage ? todaysMessage : "Today's Message to Myself"}
+                {todaysMessage ? todaysMessage : "Today's Message to Myself..."}
               </textarea>
             </label>
 
@@ -133,7 +133,7 @@ const Journal = () => {
             >
               {someoneToSurprise
                 ? someoneToSurprise
-                : "Someone I could surprise with a note, gift,or sign of appreciation is..."}
+                : "Someone I could surprise with a note, gift, or sign of appreciation is..."}
             </textarea>
 
             <textarea
@@ -216,7 +216,7 @@ const Journal = () => {
               {replace ? replace : "persons to connect with"}
             </textarea> */}
 
-            <input type='submit' value='Submit' />
+            <input class='button is-light' type='submit' value='Submit' />
           </section>
 
           <section class='section'>
