@@ -23,15 +23,21 @@ const LifeGoals = () => {
   }
 
   const PostLifeGoals = async () => {
-    const resp = await axios.post("https://localhost:5001/api/LongTermGoals")
+    const resp = await axios.post("https://localhost:5001/api/LongTermGoals", {
+      OneYearGoals: oneYearGoals,
+      ThreeYearGoals: threeYearGoals,
+      TenYearGoals: tenYearGoals,
+      LongTermGoals: longTermGoals
+    })
+    console.log(resp)
   }
 
   const handleSubmit = event => {
     event.preventDefault()
     // console.log(resp.data)
+    GetRequest()
     PostLifeGoals()
-    PutSubmit()
-    // connect model to LTG state
+    // PutSubmit()
   }
 
   return (
@@ -43,7 +49,7 @@ const LifeGoals = () => {
             <textarea
               rows='10'
               cols='50'
-              // value={oneYearGoals}
+              value={oneYearGoals}
               onChange={event => setOneYearGoals(event.target.value)}
             >
               {oneYearGoals ? oneYearGoals : "My goals for this year are..."}
