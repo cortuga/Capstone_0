@@ -7,7 +7,10 @@ const Profile = () => {
   const [password, setPassword] = useState([])
   const [email, setEmail] = useState([])
   const [accountCreated, setAccountCreated] = useState("")
-  const [dream, setDream] = useState([])
+  const [oneYear, setOneYear] = useState([])
+  const [threeYear, setThreeYear] = useState([])
+  const [tenYear, setTenYear] = useState([])
+  const [LTG, setLTG] = useState([])
 
   const GetProfileRequest = async () => {
     console.log("data")
@@ -23,7 +26,10 @@ const Profile = () => {
     const resp = await axios.get("https://localhost:5001/api/LongTermGoals/10")
 
     console.log(resp.data)
-    setDream(resp.data.oneYearGoals)
+    setOneYear(resp.data.oneYearGoals)
+    setThreeYear(resp.data.threeYearGoals)
+    setTenYear(resp.data.tenYearGoals)
+    setLTG(resp.data.longTermGoals)
   }
 
   useEffect(() => {
@@ -46,7 +52,14 @@ const Profile = () => {
           {accountCreated && moment().format("MMMM Do YY, h:mm:ss a")}
           {/* Moment.js */}
         </h2>
-        <h2>LTG / Dreams: {dream}</h2>
+        <section class='section container'>
+          <div class='container'>
+            <h2 class=''>{oneYear}</h2>
+            <h3>{threeYear}</h3>
+            <h4>{tenYear}</h4>
+            <h5>{LTG}</h5>
+          </div>
+        </section>
 
         <div class='has-text-centered section container'>
           <footer>Made with 💛 at SDG</footer>
