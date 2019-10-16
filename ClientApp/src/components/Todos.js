@@ -62,12 +62,16 @@ export default function Todos() {
     <>
       <h1 class='has-text-centered subtitle'>Todos</h1>
       <form class='section' onSubmit={handleNewTodo}>
-        <input
-          class='input is-rounded'
-          placeholder='Your todo...'
-          onChange={handleNewTodoChange}
-        ></input>
-        <input class='button' type='submit' value='Submit' />
+        <section class='container'>
+          <input
+            class='input is-rounded'
+            placeholder='Your todo...'
+            onChange={handleNewTodoChange}
+          ></input>
+        </section>
+        <section class='section'>
+          <input class='button' type='submit' value='Submit' />
+        </section>
       </form>
       <ul class='container'>
         {todos.map(todo => (

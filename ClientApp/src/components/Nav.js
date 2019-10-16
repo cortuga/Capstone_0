@@ -1,8 +1,7 @@
-import react from "react"
-import { Link } from "react-router-dom"
-import Auth from "../auth"
-
 import React from "react"
+import { Link } from "react-router-dom"
+
+import Auth from "../auth"
 
 const nav = () => {
   return (
@@ -19,7 +18,7 @@ const nav = () => {
           </div>
         </section>
 
-        <ul className='nav-links has-text-centered '>
+        <ul className='nav-links has-text-centered nav-menu'>
           <Link to='/'>
             <li>Home</li>
           </Link>
