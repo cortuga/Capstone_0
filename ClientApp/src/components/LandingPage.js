@@ -28,9 +28,10 @@ const LandingPage = () => {
         the basic planning and prioritization strategies that so often lead to
         long-term success or self cultivation. That's why I created The Compass.
         I wanted you to have a proven and strategic approach to developing
-        yourself and achieving your goals. I wanted to help instill thinking
-        patterns and practices of some of the most high performing individuals
-        in the world today and bring some of that to your daily life.
+        yourself and achieving your goals. I wanted to help instill{" "}
+        <strong>thinking patterns</strong> and practices of some of the most
+        high performing individuals in the world today and bring some of that to
+        your daily life.
       </p>
       <section class='section'>
         <button class='button is light'>
