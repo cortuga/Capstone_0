@@ -34,19 +34,19 @@ const NewUserPage = () => {
         <form
         // onSubmit={handleSubmit}
         >
-          <section class='container'>
-            <label>
-              Username:{" "}
-              <input
-                type='text'
-                name='username'
-                placeholder='Alex Smith'
-                value={userName}
-                onChange={e => setUserName(e.target.value)}
-              />
-            </label>
-          </section>
-          <label>
+          {/* <section class='container'> */}
+          <label class='label'>
+            Username:{" "}
+            <input
+              type='text'
+              name='username'
+              placeholder='Alex Smith'
+              value={userName}
+              onChange={e => setUserName(e.target.value)}
+            />
+          </label>
+          {/* </section> */}
+          <label class='label'>
             Password:{" "}
             <input
               type='text'
@@ -56,7 +56,7 @@ const NewUserPage = () => {
               onChange={e => setPassword(e.target.value)}
             />
           </label>
-          <label>
+          <label class='label'>
             Email:{" "}
             <input
               type='text'
@@ -67,7 +67,7 @@ const NewUserPage = () => {
             />
           </label>
 
-          <div class='field'>
+          <div class='field container-overview'>
             <p class='control has-icons-left'>
               <span class='select'>
                 <select>
@@ -99,10 +99,10 @@ const NewUserPage = () => {
             </div>
           </div>
 
-          <div class='field'>
+          <div class='field is'>
             <div class='control'>
               <label class='checkbox'>
-                <input type='checkbox' />I agree to the
+                <input type='checkbox' /> I agree to the
                 <a href='#'>terms and conditions</a>
               </label>
             </div>

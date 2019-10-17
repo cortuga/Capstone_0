@@ -18,7 +18,7 @@ const nav = () => {
           </div>
         </section>
 
-        <ul className='nav-links has-text-centered nav-menu'>
+        <ul className='nav-links navbar has-text-centered nav-menu is-active is-mobile'>
           <Link to='/'>
             <li>Home</li>
           </Link>
@@ -38,6 +38,18 @@ const nav = () => {
             <li>Profile</li>
           </Link>
         </ul>
+
+        {/* Later iterations will be utilizing Auth0 / Firebase :) */}
+        <div class='navbar-end'>
+          <div class='navbar-item'>
+            <div class='buttons'>
+              <a class='button is-primary'>
+                <strong>Sign up</strong>
+              </a>
+              <a class='button is-light'>Log in</a>
+            </div>
+          </div>
+        </div>
       </nav>
     </>
   )
