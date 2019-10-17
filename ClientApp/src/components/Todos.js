@@ -69,7 +69,7 @@ export default function Todos() {
             onChange={handleNewTodoChange}
           ></input>
         </section>
-        <section class='section has-text-right'>
+        <section class='section'>
           <input class='button' type='submit' value='Submit' />
         </section>
       </form>

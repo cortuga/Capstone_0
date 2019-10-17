@@ -29,7 +29,7 @@ const nav = () => {
             <li>To-do</li>
           </Link>
           <Link to='/Calender'>
-            <li>Calender</li>
+            <li>Calendar</li>
           </Link>
           <Link to='/LifeGoals'>
             <li>Life Goals</li>

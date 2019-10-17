@@ -15,3 +15,5 @@ namespace Capstone_0.Models
     public DateTime AccountCreated { get; set; } = DateTime.Now;
   }
 }
+
+// make additional col to link todos to journals

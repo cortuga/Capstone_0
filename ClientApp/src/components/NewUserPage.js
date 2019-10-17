@@ -32,10 +32,11 @@ const NewUserPage = () => {
           <info class=''>An object in motion stays in motion!</info>
         </section>
         <form
-        // onSubmit={handleSubmit}
+          class='form-check section'
+          // onSubmit={handleSubmit}
         >
           {/* <section class='container'> */}
-          <label class='label'>
+          <label class='label '>
             Username:{" "}
             <input
               type='text'

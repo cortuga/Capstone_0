@@ -2,20 +2,46 @@ import React, { useState } from "react"
 import axios from "axios"
 
 const Journal = () => {
-  const [excited, setExcited] = useState("")
-  const [oneWord, setOneWord] = useState("") //not set up
-  const [needsMe, setNeedsMe] = useState("")
-  const [stressMeOut, setStressMeOut] = useState("")
-  const [bestSelf, setBestSelf] = useState("")
-  const [someoneToSurprise, setSomeoneToSurprise] = useState("")
-  const [excellence, setExcellence] = useState("")
-  const [boldAction, setBoldAction] = useState("")
+  const [excited, setExcited] = useState(
+    "One Thing I can get excited about today is..."
+  )
+  const [oneWord, setOneWord] = useState(
+    " If one word could describe the kind of person I want to be today, then that word is...and why I chose it..."
+  )
+  const [needsMe, setNeedsMe] = useState(
+    "Someone who need me on my A game today is..."
+  )
+  const [stressMeOut, setStressMeOut] = useState(
+    "A situation that might stress me out or trip me up today..."
+  )
+  const [bestSelf, setBestSelf] = useState(
+    "...and the way that my best self would deal with this is..."
+  )
+  const [someoneToSurprise, setSomeoneToSurprise] = useState(
+    "Someone I could surprise with a note, gift, or sign of appreciation is..."
+  )
+  const [excellence, setExcellence] = useState(
+    "One action I could take today to demonstrate excellence or real value is..."
+  )
+  const [boldAction, setBoldAction] = useState(
+    "One bold action I could take today is..."
+  )
 
-  const [lifeMeta, setLifeMeta] = useState("")
-  const [futureProjects, setFutureProjects] = useState("")
-  const [successfulToday, setSuccessfulToday] = useState("")
-  const [todaysMessage, setTodaysMessage] = useState("")
-  const [topPriorities, setTopPriorities] = useState("")
+  const [lifeMeta, setLifeMeta] = useState(
+    "If I highest self was looking at my life from a high level, I would tell myself that..."
+  )
+  const [futureProjects, setFutureProjects] = useState(
+    "The big projects I have to keep in mind that I want to take on, even if I can't act toward them today, are..."
+  )
+  const [successfulToday, setSuccessfulToday] = useState(
+    "I would know that today was a great success if at the end of the day I did or felt these things"
+  )
+  const [todaysMessage, setTodaysMessage] = useState(
+    "Today's Message to Myself..."
+  )
+  const [topPriorities, setTopPriorities] = useState(
+    "My top 3 priorities or goals today are..."
+  )
   // const [mustBeDoneToday, setMustBeDoneToday] = useState("")
   const [connectToday, setConnectToday] = useState("")
 
@@ -60,7 +86,7 @@ const Journal = () => {
                 cols='50'
                 onChange={e => setTodaysMessage(e.target.value)}
               >
-                {todaysMessage ? todaysMessage : "Today's Message to Myself..."}
+                {todaysMessage}
               </textarea>
             </label>
 
@@ -76,9 +102,7 @@ const Journal = () => {
               cols='50'
               onChange={e => setExcited(e.target.value)}
             >
-              {excited
-                ? excited
-                : "One Thing I can get excited about today is..."}
+              {excited}
             </textarea>
 
             <textarea
@@ -87,9 +111,7 @@ const Journal = () => {
               cols='50'
               onChange={e => setOneWord(e.target.value)}
             >
-              {oneWord
-                ? oneWord
-                : " If one word could describe the kind of person I want to be today, then that word is... and why I chose it..."}
+              {oneWord}
             </textarea>
 
             <textarea
@@ -98,9 +120,7 @@ const Journal = () => {
               cols='50'
               onChange={e => setNeedsMe(e.target.value)}
             >
-              {needsMe
-                ? needsMe
-                : "Someone who need me on my A game today is..."}
+              {needsMe}
             </textarea>
 
             <textarea
@@ -109,9 +129,7 @@ const Journal = () => {
               cols='50'
               onChange={e => setStressMeOut(e.target.value)}
             >
-              {stressMeOut
-                ? stressMeOut
-                : "A situation that might stress me out or trip me up today..."}
+              {stressMeOut}
             </textarea>
 
             <textarea
@@ -120,9 +138,7 @@ const Journal = () => {
               cols='50'
               onChange={e => setBestSelf(e.target.value)}
             >
-              {bestSelf
-                ? bestSelf
-                : "...and the way that my best self would deal with this is..."}
+              {bestSelf}
             </textarea>
 
             <textarea
@@ -131,9 +147,7 @@ const Journal = () => {
               cols='50'
               onChange={e => setSomeoneToSurprise(e.target.value)}
             >
-              {someoneToSurprise
-                ? someoneToSurprise
-                : "Someone I could surprise with a note, gift, or sign of appreciation is..."}
+              {someoneToSurprise}
             </textarea>
 
             <textarea
@@ -142,9 +156,7 @@ const Journal = () => {
               cols='50'
               onChange={e => setExcellence(e.target.value)}
             >
-              {excellence
-                ? excellence
-                : "One action I could take today to demonstrate excellence or real value is..."}
+              {excellence}
             </textarea>
 
             <textarea
@@ -153,9 +165,7 @@ const Journal = () => {
               cols='50'
               onClick={e => setBoldAction(e.target.value)}
             >
-              {boldAction
-                ? boldAction
-                : "One bold action I could take today is..."}
+              {boldAction}
             </textarea>
 
             <textarea
@@ -164,9 +174,7 @@ const Journal = () => {
               cols='50'
               onClick={e => setLifeMeta(e.target.value)}
             >
-              {lifeMeta
-                ? lifeMeta
-                : "If I highest self was looking at my life from a high level, I would tell myself that..."}
+              {lifeMeta}
             </textarea>
 
             <textarea
@@ -175,9 +183,7 @@ const Journal = () => {
               cols='50'
               onClick={e => setFutureProjects(e.target.value)}
             >
-              {futureProjects
-                ? futureProjects
-                : "The big projects I have to keep in mind that I want to take on, even if I can't act toward them today, are..."}
+              {futureProjects}
             </textarea>
 
             <textarea
@@ -186,9 +192,7 @@ const Journal = () => {
               cols='50'
               onClick={e => setSuccessfulToday(e.target.value)}
             >
-              {successfulToday
-                ? successfulToday
-                : "I would know that today was a great success if at the end of the day I did or felt these things"}
+              {successfulToday}
             </textarea>
 
             <textarea
@@ -197,9 +201,7 @@ const Journal = () => {
               cols='50'
               onClick={e => setTopPriorities(e.target.value)}
             >
-              {topPriorities
-                ? topPriorities
-                : "My top 3 priorities or goals today are..."}
+              {topPriorities}
             </textarea>
 
             {/* <textarea

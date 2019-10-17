@@ -37,6 +37,7 @@ const JournalHistory = () => {
             <li>{e.lookingAtMyLifeMetaIWouldTellMyself}</li>
             <li>{e.projectsToKeepInMindForFutureAre}</li>
             <li>{e.iWouldKnowTodayIsASuccessIf}</li>
+            <li>{e.todaysMessageToMyself}</li>
           </ul>
         )
       })}
