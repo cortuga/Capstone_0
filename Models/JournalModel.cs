@@ -5,6 +5,7 @@ namespace Capstone_0.Models
   public class JournalModel
   {
     //   Still need to add individual questions for Journal. See HPP. 
+    public String TodaysMessageToMyself { get; set; }
     public String ExcitedAboutToday { get; set; }
     public String OneWordToDescribeMeToday { get; set; }
     public String WhoNeedsMeOnMyAGame { get; set; }

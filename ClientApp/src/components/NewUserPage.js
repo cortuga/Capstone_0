@@ -28,8 +28,8 @@ const NewUserPage = () => {
   return (
     <>
       <section class='section'>
-        <section class='container'>
-          <info>An object in motion stays in motion!</info>
+        <section class='container section'>
+          <info class=''>An object in motion stays in motion!</info>
         </section>
         <form
         // onSubmit={handleSubmit}

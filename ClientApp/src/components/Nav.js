@@ -6,7 +6,7 @@ import Auth from "../auth"
 const nav = () => {
   return (
     <>
-      <nav class='tabs'>
+      <nav class='tabs is-fluid'>
         <section class='hero'>
           <div class='hero-body'>
             <div class='container'>
@@ -18,7 +18,7 @@ const nav = () => {
           </div>
         </section>
 
-        <ul className='nav-links navbar has-text-centered nav-menu is-active is-mobile'>
+        <ul className='nav-links navbar has-text-centered nav-menu is-active is-mobile  is-fluid'>
           <Link to='/'>
             <li>Home</li>
           </Link>
@@ -43,9 +43,9 @@ const nav = () => {
         <div class='navbar-end'>
           <div class='navbar-item'>
             <div class='buttons'>
-              <a class='button is-primary'>
-                <strong>Sign up</strong>
-              </a>
+              <Link to='/NewUserPage' class='button is-info'>
+                <strong>Sign up! </strong>
+              </Link>
               <a class='button is-light'>Log in</a>
             </div>
           </div>

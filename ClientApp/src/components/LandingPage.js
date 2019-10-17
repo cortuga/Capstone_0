@@ -37,9 +37,9 @@ const LandingPage = () => {
         your daily life.
       </p>
       <section class='section container'>
-        <button class='button is light'>
+        {/* <button class='button is light'>
           <Link to='/NewUserPage'>New User</Link>
-        </button>
+        </button> */}
       </section>
 
       <section class='section'>

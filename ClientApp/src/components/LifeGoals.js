@@ -56,7 +56,7 @@ const LifeGoals = () => {
             </textarea>
           </label>
 
-          <p class='section'>
+          <p class='section notification'>
             Note: We tend to overestimate what we're able to do in 1 year but
             underestimate what we can do in 3.
           </p>

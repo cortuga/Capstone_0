@@ -69,20 +69,22 @@ export default function Todos() {
             onChange={handleNewTodoChange}
           ></input>
         </section>
-        <section class='section'>
+        <section class='section has-text-right'>
           <input class='button' type='submit' value='Submit' />
         </section>
       </form>
-      <ul class='container'>
+      <ul class='container has-text-centered'>
         {todos.map(todo => (
           <li key={todo.id} className='todo-li'>
             {todo.text}
-            <button
-              class='button is-light is-delete'
-              onClick={() => removeTodo(todo.id)}
-            >
-              Delete
-            </button>
+            <div>
+              <button
+                class='button is-primary is-small'
+                onClick={() => removeTodo(todo.id)}
+              >
+                Done
+              </button>
+            </div>
           </li>
         ))}
       </ul>

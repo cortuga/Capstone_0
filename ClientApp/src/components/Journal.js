@@ -49,13 +49,13 @@ const Journal = () => {
     <>
       <section class='has-text-centered'>
         <div>
-          <h2 class='subtitle'>Morning Mindset:</h2>
+          <h2 class='subtitle is-info'>Morning Mindset:</h2>
         </div>
         <form onSubmit={handleSubmit}>
           <section class='container'>
             <label>
               <textarea
-                className='textarea'
+                className='textarea is-info'
                 rows='5'
                 cols='50'
                 onChange={e => setTodaysMessage(e.target.value)}
@@ -71,7 +71,7 @@ const Journal = () => {
             {/* Want to make the Top 3 goals passed to the Todos component */}
 
             <textarea
-              className='textarea'
+              className='textarea is-info'
               rows='5'
               cols='50'
               onChange={e => setExcited(e.target.value)}
@@ -82,7 +82,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
-              className='textarea'
+              className='textarea is-info'
               rows='5'
               cols='50'
               onChange={e => setOneWord(e.target.value)}
@@ -93,7 +93,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
-              className='textarea'
+              className='textarea is-info'
               rows='5'
               cols='50'
               onChange={e => setNeedsMe(e.target.value)}
@@ -104,7 +104,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
-              className='textarea'
+              className='textarea is-info'
               rows='5'
               cols='50'
               onChange={e => setStressMeOut(e.target.value)}
@@ -115,7 +115,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
-              className='textarea'
+              className='textarea is-info'
               rows='5'
               cols='50'
               onChange={e => setBestSelf(e.target.value)}
@@ -126,7 +126,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
-              className='textarea'
+              className='textarea is-info'
               rows='5'
               cols='50'
               onChange={e => setSomeoneToSurprise(e.target.value)}
@@ -137,7 +137,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
-              className='textarea'
+              className='textarea is-info'
               rows='5'
               cols='50'
               onChange={e => setExcellence(e.target.value)}
@@ -148,7 +148,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
-              className='textarea'
+              className='textarea is-info'
               rows='5'
               cols='50'
               onClick={e => setBoldAction(e.target.value)}
@@ -159,7 +159,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
-              className='textarea'
+              className='textarea is-info'
               rows='5'
               cols='50'
               onClick={e => setLifeMeta(e.target.value)}
@@ -170,7 +170,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
-              className='textarea'
+              className='textarea is-info'
               rows='5'
               cols='50'
               onClick={e => setFutureProjects(e.target.value)}
@@ -181,7 +181,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
-              className='textarea'
+              className='textarea is-info'
               rows='5'
               cols='50'
               onClick={e => setSuccessfulToday(e.target.value)}
@@ -192,7 +192,7 @@ const Journal = () => {
             </textarea>
 
             <textarea
-              className='textarea'
+              className='textarea is-info '
               rows='5'
               cols='50'
               onClick={e => setTopPriorities(e.target.value)}
@@ -219,7 +219,7 @@ const Journal = () => {
             <input class='button is-light' type='submit' value='Submit' />
           </section>
 
-          <section class='section'>
+          <section class='section is-info'>
             <label>
               <h3>Already have a journal entry written?</h3>
               <h4>Upload that file</h4>
