@@ -1,3 +1,8 @@
+First attempt at a working concept of a Life~ Bug Tracker. 
+
+To set daily intentions and objectives while giving a history search feature to track where the day went wrong or right.
+
+
 Capstone Pitch
 
 capstone 00 - wireframes - #30
